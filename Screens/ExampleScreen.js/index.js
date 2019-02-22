@@ -5,7 +5,7 @@ export default class ExampleScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Example Component</Text>
+        <Text>Example Component </Text>
       </View>
     );
   }
