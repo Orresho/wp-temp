@@ -3,7 +3,7 @@
 export default [
 	{
 		key: '1',
-		screen: 'CompanyNews',
+		screen: 'Example',
 		title: 'Company News',
 		description: '',
 		background: 'red',
