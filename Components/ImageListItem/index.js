@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Animated } from 'react-native';
 
-export default class ImageLoader extends Component {
+export default class ImageListItem extends Component {
   state= {
     opacity: new Animated.Value(0),
   }
