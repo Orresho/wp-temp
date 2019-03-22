@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ImageListItem from '../../Components/ImageListItem';
-import { StyleSheet, View, FlatList, TouchableOpacity, Alert } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 
-onPress = (item) => {
-  Alert.alert('Hi '+item.value+'! Login with your personal code');
-}
-
-const ImageList = ({ users, width, height, columns }) => {
+const ImageList = ({ users, width, height, columns, onPress}) => {
   return (
     <FlatList
       data={users}
       renderItem={({item}) => (
         <View style={[styles.itemContainer, {width: width}, {height: height}]}>
-          <TouchableOpacity onPress={() => onPress(item)}>
-            <ImageListItem style={[styles.image, {width: width}, {height: height}]} source={item.image} />
-          </TouchableOpacity>
+          <ImageListItem 
+            style={[styles.image, {width: width}, {height: height}]} 
+            source={item.image}
+            onPress={onPress}
+            item={item}
+          />
         </View>
       )}
       keyExtractor={item => item.id}
