@@ -5,9 +5,10 @@ import { StyleSheet, View, FlatList } from 'react-native';
 const ImageList = ({ users, width, height, columns, onPress}) => {
   return (
     <FlatList
+      style={styles.container}
       data={users}
       renderItem={({item}) => (
-        <View style={[styles.itemContainer, {width: width}, {height: height}]}>
+        <View style={[styles.itemContainer, {width: width}]}>
           <ImageListItem 
             style={[styles.image, {width: width}, {height: height}]} 
             source={item.image}
@@ -22,7 +23,7 @@ const ImageList = ({ users, width, height, columns, onPress}) => {
   );
 }
 const styles = StyleSheet.create({
-  itemContainer: {
+  container: {
     backgroundColor: '#287dc5',
   }
 });

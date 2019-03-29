@@ -14,4 +14,5 @@ export default [
   {id: '13', value: 'Janne', image: require('../../assets/images/users/hanna.jpg')},
   {id: '14', value: 'Sebbe', image: require('../../assets/images/users/hanna.jpg')},
   {id: '15', value: 'Micke', image: require('../../assets/images/users/micke.jpg')},
+  {id: '16', value: 'Rikard', image: require('../../assets/images/users/hanna.jpg')},
 ];
