@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageListItem from '../../Components/ImageListItem';
+import ImageListItem from '../../components/ImageListItem';
 import { StyleSheet, View, FlatList } from 'react-native';
 
 const ImageList = ({ users, width, height, columns, onPress}) => {

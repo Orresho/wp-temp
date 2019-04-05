@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Alert, Dimensions, Animated } from 'react-native';
-import ImageList from '../../Components/ImageList';
+import { Alert, Dimensions } from 'react-native';
+import ImageList from '../../components/ImageList';
 import Users from './users';
 
 export default class HomeScreen extends Component {
-  
   onPress = (item) => {
     Alert.alert('Hi '+item.value+'! Login with your personal code');
+    // navigate to home screen
+    console.log(this.props)
   }
   
   render() {
