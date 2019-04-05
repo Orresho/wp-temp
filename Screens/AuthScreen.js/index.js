@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {Dimensions, View } from 'react-native';
 import ImageList from '../../Components/ImageList';
-import SignIn from '../../Components/SignIn';
+import Authentication from '../../Components/Authentication';
 import Users from './users';
 
-export default class HomeScreen extends Component {
+export default class AuthScreen extends Component {
   state = {
     isLoggingIn: false,
     isLoggingInUser: 0,
@@ -25,7 +25,7 @@ export default class HomeScreen extends Component {
     const height = Dimensions.get('window').height/numRows;
     return (
       <View>
-        {this.state.isLoggingIn === false ? (
+        {!this.state.isLoggingIn ? (
           <ImageList
             users={Users}
             columns={numColumns}
@@ -34,7 +34,7 @@ export default class HomeScreen extends Component {
             onPress={this.onPress}
           />
         ) : (
-          <SignIn
+          <Authentication
             user={this.state.isLoggingInUser}
             onClose={this.onClose}
           />
