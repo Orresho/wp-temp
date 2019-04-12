@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class ExampleScreen extends Component {
+export default class Booking extends Component {
+
+  static navigationOptions = {
+		title: 'Booking',
+	};
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Example Component </Text>
+        <Text>Booooking is done here</Text>
       </View>
     );
   }

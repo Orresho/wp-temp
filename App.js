@@ -1,13 +1,16 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './Screens/HomeScreen.js';
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+import HomeScreen from './screens/AuthenticateScreen';
+import { RootNavigatorStack } from './navigator/rootNavigator';
 
-export default class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <HomeScreen />
-      </View>
+      <RootNavigatorStack>
+        <View style={styles.container}>
+          <HomeScreen />
+        </View>
+      </RootNavigatorStack>
     );
   }
 }
@@ -20,3 +23,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
