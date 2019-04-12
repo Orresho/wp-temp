@@ -4,9 +4,6 @@ import NavigationList from '../../components/HomeNavigation/NavigationList';
 import navigationData from './_NavigationConfig';
 
 export default class HomeScreen extends Component {
-	static navigationOptions = {
-		title: 'Welcome',
-	};
 
 	// Create press handler for each screen specified in the config file
 	_handleNavigate = (screen, data=[]) => {
